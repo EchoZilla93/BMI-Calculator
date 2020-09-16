@@ -99,10 +99,11 @@
 		C28F9D642510D71A008FEBAD /* BMI Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				C28F9D972510E9E7008FEBAD /* Controller */,
+				C28F9D962510E9BD008FEBAD /* View */,
+				C28F9D952510E9B1008FEBAD /* Model */,
 				C28F9D652510D71B008FEBAD /* AppDelegate.swift */,
 				C28F9D672510D71B008FEBAD /* SceneDelegate.swift */,
-				C28F9D692510D71B008FEBAD /* ViewController.swift */,
-				C28F9D6B2510D71B008FEBAD /* Main.storyboard */,
 				C28F9D6E2510D722008FEBAD /* Assets.xcassets */,
 				C28F9D702510D722008FEBAD /* LaunchScreen.storyboard */,
 				C28F9D732510D722008FEBAD /* Info.plist */,
@@ -126,6 +127,29 @@
 				C28F9D892510D723008FEBAD /* Info.plist */,
 			);
 			path = "BMI CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		C28F9D952510E9B1008FEBAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C28F9D962510E9BD008FEBAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C28F9D6B2510D71B008FEBAD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C28F9D972510E9E7008FEBAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C28F9D692510D71B008FEBAD /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

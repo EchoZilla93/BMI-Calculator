@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var weightSlider: UISlider!
     
     let backgroundImageView = UIImageView()
 
@@ -16,6 +20,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setBackground()
     }
+    
+    @IBAction func heightSliderChange(_ sender: UISlider) {
+        
+        heightLabel.text = (String(format: "%.2f", sender.value)) + " m"
+    }
+    
+    @IBAction func wieghtSliderChange(_ sender: UISlider) {
+        weightLabel.text = (String(format: "%.0f", sender.value)) + " kg"
+    }
+    
+    @IBAction func calculatePressed(_ sender: UIButton) {
+        let height = heightSlider.value
+        let weight = weightSlider.value
+        let bmi = weight / pow(height, 2)
+        print((String(format: "%.2f", bmi)))
+    }
+    
     
     func setBackground(){
         self.view.addSubview(backgroundImageView)

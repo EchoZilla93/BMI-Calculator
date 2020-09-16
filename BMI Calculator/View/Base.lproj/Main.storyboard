@@ -15,17 +15,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-dA-yeF">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-dA-yeF">
                                 <rect key="frame" x="28" y="624" width="358" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.58431372549019611" green="0.36862745098039218" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" red="0.58352033974617223" green="0.37031540881678449" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="heightSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="YuE-Rr-2de"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iSu-wf-DmP">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="35" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="iSu-wf-DmP">
                                 <rect key="frame" x="28" y="727" width="358" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.58431372549019611" green="0.36862745098039218" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" red="0.58431372550000005" green="0.36862745099999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="wieghtSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="5lK-rn-64V"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qga-cs-1ne">
                                 <rect key="frame" x="30" y="792" width="354" height="50"/>
@@ -37,6 +43,9 @@
                                 <state key="normal" title="CALCULATE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c63-sB-cIp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gj-yh-UwI">
                                 <rect key="frame" x="30" y="601" width="41" height="17"/>
@@ -95,6 +104,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="KiD-al-hPT" id="dMt-CU-tfT"/>
+                        <outlet property="heightSlider" destination="Qw6-dA-yeF" id="Adu-Pk-JEr"/>
+                        <outlet property="weightLabel" destination="wDZ-2X-zoJ" id="Vue-6J-4nh"/>
+                        <outlet property="weightSlider" destination="iSu-wf-DmP" id="6RG-Qd-Erw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
