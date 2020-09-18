@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  BMI Calculator
+//  BMI CalculatorBrain
 //
 //  Created by Александр Головин on 15.09.2020.
 //  Copyright © 2020 Александр Головин. All rights reserved.
